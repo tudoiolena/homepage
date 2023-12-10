@@ -172,6 +172,18 @@ body {
   text-align: justify;
 }
 
+.skills__text span::after {
+  content: "•";
+  color: var(--text-decoration-color);
+  padding-left: 4px;
+}
+
+.skills__text span:last-child::after {
+  content: "•";
+  color: transparent;
+  padding-left: 4px;
+}
+
 /* Experience and additional info styles */
 
 .experiences {
@@ -251,6 +263,12 @@ body {
 }
 
 .additional-info__education-university-name {
+  color: var(--secondary-text-color);
+}
+
+.additional-info__education-university-degree {
+  font-style: italic;
+  font-weight: bold;
   color: var(--secondary-text-color);
 }
 
