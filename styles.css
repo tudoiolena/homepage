@@ -233,6 +233,7 @@ body {
 .experiences__company-project-responsibilities {
   color: var(--secondary-text-color);
   padding-left: 20px;
+  margin-bottom: 10px;
 }
 
 .additional-info {
@@ -246,6 +247,10 @@ body {
 .additional-info__education-header {
   color: var(--secondary-text-color);
   text-align: left;
+  margin-bottom: 20px;
+}
+
+.additional-info__education-university {
   margin-bottom: 20px;
 }
 
@@ -270,6 +275,7 @@ body {
   font-style: italic;
   font-weight: bold;
   color: var(--secondary-text-color);
+  margin-bottom: 10px;
 }
 
 .additional-info__languages {
