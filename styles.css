@@ -95,6 +95,19 @@ body {
 
 .contact-info__block--center {
   justify-content: center;
+  position: relative;
+}
+
+.contact-info__block--center:hover .contact-info__avatar {
+  opacity: 0;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.contact-info__block--center:hover .contact-info__avatar-secret {
+  opacity: 1;
+  cursor: pointer;
+  transition: 1s;
 }
 
 .contact-info__item {
@@ -131,6 +144,21 @@ body {
   object-fit: cover;
   border: 3px solid;
   border-color: var(--text-decoration-color);
+  opacity: 1;
+}
+
+.contact-info__avatar-secret {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 3px solid;
+  border-color: var(--text-decoration-color);
+  opacity: 0;
+  position: absolute;
+  top: 7px;
+  left: 0;
+  z-index: 2;
 }
 
 /* Intro and skills styles */
@@ -172,6 +200,18 @@ body {
   text-align: justify;
 }
 
+.skills__text span::after {
+  content: "•";
+  color: var(--text-decoration-color);
+  padding-left: 4px;
+}
+
+.skills__text span:last-child::after {
+  content: "•";
+  color: transparent;
+  padding-left: 4px;
+}
+
 /* Experience and additional info styles */
 
 .experiences {
@@ -183,13 +223,6 @@ body {
   color: var(--secondary-text-color);
   text-align: left;
   margin-bottom: 20px;
-}
-
-.experiences__company-header-durability {
-  color: var(--durability-text-color);
-  text-align: left;
-  margin-bottom: 10px;
-  font-size: 15px;
 }
 
 .experiences__company-header-name {
@@ -221,6 +254,7 @@ body {
 .experiences__company-project-responsibilities {
   color: var(--secondary-text-color);
   padding-left: 20px;
+  margin-bottom: 10px;
 }
 
 .additional-info {
@@ -234,6 +268,10 @@ body {
 .additional-info__education-header {
   color: var(--secondary-text-color);
   text-align: left;
+  margin-bottom: 20px;
+}
+
+.additional-info__education-university {
   margin-bottom: 20px;
 }
 
@@ -252,6 +290,13 @@ body {
 
 .additional-info__education-university-name {
   color: var(--secondary-text-color);
+}
+
+.additional-info__education-university-degree {
+  font-style: italic;
+  font-weight: bold;
+  color: var(--secondary-text-color);
+  margin-bottom: 10px;
 }
 
 .additional-info__languages {
